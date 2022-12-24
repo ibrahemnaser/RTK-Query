@@ -15,11 +15,15 @@
  */
 
 // 1)- create store
-const { createStore } = require("redux");
+const { createStore, combineReducers } = require("redux");
 
 // 2)- create reducer
 const CAKE_STATE = {
   numOfCake: 100,
+};
+
+const ICE_STATE = {
+  numOfIce: 50,
 };
 
 const cakeReducer = (state = CAKE_STATE, action) => {
@@ -38,8 +42,29 @@ const cakeReducer = (state = CAKE_STATE, action) => {
       return state;
   }
 };
+const iceReducer = (state = ICE_STATE, action) => {
+  switch (action.type) {
+    case "INCREASE_ICE":
+      return {
+        ...state,
+        numOfIce: state.numOfIce + 1,
+      };
+    case "DECREASE_ICE":
+      return {
+        ...state,
+        numOfIce: state.numOfIce - 1,
+      };
+    default:
+      return state;
+  }
+};
 
-const store = createStore(cakeReducer);
+const rootReducer = combineReducers({
+  cake: cakeReducer,
+  ice: iceReducer,
+});
+
+const store = createStore(rootReducer);
 
 console.log("INITIAL", store.getState());
 
@@ -49,9 +74,10 @@ const unsubscribe = store.subscribe(() => {
 });
 
 store.dispatch({ type: "DECREASE_CAKE" });
-store.dispatch({ type: "DECREASE_CAKE" });
+store.dispatch({ type: "DECREASE_ICE" });
 store.dispatch({ type: "DECREASE_CAKE" });
 store.dispatch({ type: "INCREASE_CAKE" });
+store.dispatch({ type: "INCREASE_ICE" });
 console.log(store.getState());
 console.log(store.getState());
 console.log(store.getState());
@@ -59,7 +85,7 @@ console.log(store.getState());
 // 4)- unsbscribe any change to the store
 unsubscribe();
 store.dispatch({ type: "DECREASE_CAKE" });
-store.dispatch({ type: "INCREASE_CAKE" });
+store.dispatch({ type: "INCREASE_ICE" });
 store.dispatch({ type: "INCREASE_CAKE" });
 store.dispatch({ type: "INCREASE_CAKE" });
 store.dispatch({ type: "DECREASE_CAKE" });
