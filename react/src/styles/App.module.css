@@ -1,0 +1,10 @@
+.mainSection {
+  background-color: #ff9800;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+.mainSection h1 {
+  font-size: 55px;
+  margin-bottom: 1rem;
+}

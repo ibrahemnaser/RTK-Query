@@ -1,0 +1,66 @@
+.cakeContainer {
+  background-color: white;
+  padding: 2rem;
+}
+
+.cakeContainer h3 {
+  color: #ff9800;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.cakeContainer .cakeNum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+.cakeContainer p {
+  color: #ff9800;
+  font-size: 22px;
+  font-weight: 900;
+}
+.cakeContainer span {
+  color: #ff9800;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.cakeContainer .inputContainer {
+  margin-bottom: 1rem;
+}
+.cakeContainer .inputContainer input {
+  padding: 1em 2em;
+  color: black;
+  border: 1px solid #ff9800;
+}
+.cakeContainer .inputContainer input:focus {
+  outline: 2px solid wheat;
+}
+
+.cakeBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cakeBtns button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  font-size: 22px;
+}
+
+.cakeBtns button:active {
+  filter: brightness(0.8);
+}
+
+.cakeBtns button.plusBtn {
+  background-color: #38ae38;
+}
+.cakeBtns button.minusBtn {
+  background-color: #be161f;
+}
+.cakeBtns button.resetBtn {
+  background-color: #16aabe;
+}
