@@ -1,0 +1,71 @@
+.cattySection {
+  border: 1px solid blueviolet;
+  padding: 2rem;
+  text-align: center;
+}
+.title {
+  text-align: center;
+  font-size: 18px;
+}
+.btnContainer {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.fetchBtn {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-block: 2rem;
+}
+.fetchBtn:active {
+  background-color: rgb(87, 26, 144);
+}
+.postContainer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.loadingPost {
+  opacity: 0.5;
+}
+.postContainer img {
+  width: 150px;
+}
+
+/* Loader */
+
+.loader {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #ede;
+  border-top-color: blueviolet;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Link Component */
+
+.linkComponent {
+  margin-bottom: 1em;
+  display: inline-block;
+}
+
+/* Modal */
+.modal {
+  background-color: rgb(192, 186, 186);
+  padding: 50px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}

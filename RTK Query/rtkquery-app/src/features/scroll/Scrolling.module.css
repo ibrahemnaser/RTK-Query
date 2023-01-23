@@ -1,0 +1,25 @@
+.sectionContainer {
+  border: 1px solid blueviolet;
+  padding: 2rem;
+  text-align: center;
+}
+.title {
+  text-align: center;
+  font-size: 18px;
+}
+.dataContainer {
+  border: 1px solid mediumpurple;
+}
+.dataContainer > div.fetching {
+  opacity: 0.4;
+}
+p {
+  font-size: 24px;
+}
+
+/* Link Component */
+
+.linkComponent {
+  margin-bottom: 1em;
+  display: inline-block;
+}
