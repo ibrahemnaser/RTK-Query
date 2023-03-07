@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const userAPI = createApi({
   reducerPath: "userApi",
 
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:4000/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/" }),
 
   tagTypes: ["Users"], // make a relation between query and mutation
 
