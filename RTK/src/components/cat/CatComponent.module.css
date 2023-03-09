@@ -1,0 +1,12 @@
+.catSection {
+  margin-block: 2rem;
+}
+.imgContainer {
+  width: 250px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5px;
+}
+.imgContainer img {
+  max-width: 100%;
+}

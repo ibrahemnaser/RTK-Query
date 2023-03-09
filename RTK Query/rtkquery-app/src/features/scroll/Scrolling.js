@@ -9,7 +9,14 @@ const Scrolling = () => {
 
   // onscroll pagination
 
-  const { data, isFetching } = useGetUsersWithPageQuery(currPg);
+  const { data, isFetching,refetch } = useGetUsersWithPageQuery(currPg);
+
+ 
+
+const handleRefetch=()=>{
+  console.log('HELLO REFETCH');
+  refetch();
+}
 
   useEffect(() => {
     const onScroll = () => {
@@ -38,6 +45,9 @@ const Scrolling = () => {
       <Link className={styles.linkComponent} to={"/"}>
         Back
       </Link>
+      <button onClick={handleRefetch}>
+        Refetch
+      </button>
       <section className={styles.sectionContainer}>
         <h2 className={styles.title}>OnScroll Fetching using RTK Query!!</h2>
         <div className={styles.dataContainer}>

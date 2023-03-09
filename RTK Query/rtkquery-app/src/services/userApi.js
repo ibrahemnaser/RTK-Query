@@ -66,16 +66,17 @@ export const userAPI = createApi({
       query: (page = 1) => `users?_page=${page}&_limit=5`,
       // Only have one cache entry because the arg always maps to one string
       serializeQueryArgs: (args) => {
-        // console.log(args);
+       
         return args.endpointName;
       },
       // Always merge incoming data to the cache entry
       merge: (currentCache, newItems) => {
-        console.log(newItems);
+        
         currentCache.push(...newItems);
       },
       // Refetch when the page arg changes
       forceRefetch({ currentArg, previousArg }) {
+        
         return currentArg !== previousArg;
       },
       providesTags: ["Users"],
